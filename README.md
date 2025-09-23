@@ -1,6 +1,6 @@
 # RaceCLIP
 
-<img src="img/overview.svg">
+<img src="workflow.svg">
 
 This is the implemenation of RaceCLIP.
 ### Requirements
@@ -27,7 +27,7 @@ python MLLM_captioning.py
 ```
 
 ### Multi-text contrastive learning
-Now you can start to fine-tune the model from pulicly available weights pretrained by [OpenAI] (https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt) using multi-text contrastive loss:
+Now you can start to fine-tune the model from pulicly available weights pretrained by [OpenAI](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt) using multi-text contrastive loss:
 
 ```angular2
 python main.py
