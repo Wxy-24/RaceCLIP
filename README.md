@@ -1,8 +1,8 @@
-# KL-CVR
+# RaceCLIP
 
 <img src="img/overview.svg">
 
-
+This is the implemenation of RaceCLIP.
 ### Requirements
 
 Run the following command to install the required packages:
@@ -10,50 +10,36 @@ Run the following command to install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
-
-### Pre-processing
-First, install OpenKE as shown in the [instruction](https://github.com/Wxy-24/KL-CVR/blob/main/prepro/OpenKE/README.md).
-
-Then merge dataset knowledge with knowledge graph.(save as prepro/knowledge/train_umls_example.txt')
-
-Finally, Run the following command to translate knowledge graph to embeddings:
+### Offline UMLS knowledge retrieval
+The term definitions and associated relationships can be retrieved via the [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html) shown as following script: 
 
 ```angular2
-python prepro/prepro_pretraining_data.py
+python retrieval.py
 ```
 
-to get the following files:
+### Retrieval augmented MLLM captioning
+
+Please download [LLaVa-Med](https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b) before recaptioning the [ROCO](https://github.com/razorx89/roco-dataset) dataset
+The detailed usage of LLaVa-Med is available via the official repository provided by [Microsoft](https://github.com/microsoft/LLaVA-Med)
 
 ```angular2
-root[prepro]:
-+--knowledge
-| +--train2id.txt
-| +--relation2id.txt
-| +--entity2id.txt
-| +--ent_embeddings.ckpt
-| +--image_node_embeddings.pkl
-
+python MLLM_captioning.py
 ```
 
-### Fine-Tuning
-
-Now you can start to fine-tune the model from pulicly available weights pretrained by [OpenAI](https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt):
+### Multi-text contrastive learning
+Now you can start to fine-tune the model from pulicly available weights pretrained by [OpenAI] (https://openaipublic.azureedge.net/clip/models/5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f/ViT-B-16.pt) using multi-text contrastive loss:
 
 ```angular2
 python main.py
 ```
 
-### Model checkpoint
+### Dataset description
+This framework recaptions ROCO dataset with the integration of expert knowledge from the medical knowledge base UMLS.
+Each image in the recaptioned dataset is paired with 4 various augmented captions. [Details](https://www.dropbox.com/scl/fo/znirudc5ou800gksola04/AKRpmd_DCyjV5i4aOL085ZE?rlkey=ihurwizna1j4ueydlkkmj4p0d&st=npny6k0d&dl=0)
 
-We fine-tune our framework on [ROCO](https://github.com/razorx89/roco-dataset). Our weights(ViT-Base-16) are available here [Google drive](https://drive.google.com/drive/folders/1tavJ3Xsp57ezpmzLOkfhUbTBrAt6frZv?usp=drive_link). 
-
-You can find an example of how to use our model in this file: [Jupyter notebook](https://github.com/Wxy-24/KL-CVR/blob/main/how_to_load_model.ipynb)
-
-### Dataset adaption
-This framework relies on external ontology from knowledge base UMLS.
-To merge knowlegde in your dataset with existing knowledge graphs, make sure each image is paired with a set of UMLS Concept Unique Identifiers (CUIs). [Tutorial](https://github.com/Wxy-24/KL-CVR/blob/main/CUI_mapping.ipynb)
 
 ## Acknowledgement
 
-The code is based on [OpenKE](https://github.com/thunlp/OpenKE), [CLIP](https://github.com/OpenAI/CLIP).
+The implementation of RaceCLIP is based on [LLaVa-Med](https://github.com/microsoft/LLaVA-Med), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html).
 We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
+
