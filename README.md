@@ -20,7 +20,7 @@ python retrieval.py
 ### Retrieval augmented MLLM captioning
 
 Please download [MedGemma-1.5-4B](https://huggingface.co/google/medgemma-1.5-4b-it) before recaptioning the [ROCO](https://github.com/razorx89/roco-dataset) dataset
-The detailed usage of LLaVa-Med is available via the official repository provided by [Microsoft](https://github.com/microsoft/LLaVA-Med)
+The detailed usage of MedGemma is available via the official repository provided by [Google](https://github.com/google-health/medgemma)
 
 ```angular2
 python MLLM_captioning.py
