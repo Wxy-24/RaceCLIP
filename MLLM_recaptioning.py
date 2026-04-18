@@ -144,11 +144,9 @@ processor.tokenizer.padding_side = "left"
 start = datetime.now()
 
 ########## Inference Loop ########
-# for split in ['valid', 'train']:
-for split in ['train']:
+for split in ['valid', 'train']:
     print(f"Processing split: {split}")
-    
-    csv_path = f'/lustre/fswork/projects/rech/dvj/uyk23wk/xiaoyang/ConVIRT/NEW-ROCO-{split}2.csv'
+    csv_path = f'/lustre/fswork/projects/rech/dvj/uyk23wk/xiaoyang/ConVIRT/NEW-ROCO-{split}.csv'
     root_path = f'/lustre/fsn1/projects/rech/dvj/uyk23wk/xiaoyang/ImageCLEFmedical_Caption_2023_{split}_images/{split}/'
     
     # Initialize Dataset and DataLoader
@@ -222,7 +220,7 @@ for split in ['train']:
 
     # Save Results
     df_re = pd.DataFrame({'A': all_filenames, 'B': all_rewrites, 'C': all_instructions})
-    save_path = f'/lustre/fswork/projects/rech/dvj/uyk23wk/xiaoyang/ConVIRT/rewrite/NEW-ROCO-{split}2_caption-medGemma1.5-DEF.csv'
+    save_path = f'/lustre/fswork/projects/rech/dvj/uyk23wk/xiaoyang/ConVIRT/rewrite/NEW-ROCO-{split}_caption-medGemma1.5-DEF.csv'
     df_re.to_csv(save_path, index=False)
     print(f"Saved results to {save_path}")
     print(f'{split} split RECAPTION time cost: {datetime.now()-start}')
