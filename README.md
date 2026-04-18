@@ -35,11 +35,11 @@ python main.py
 
 ### Dataset description
 This framework recaptions ROCO dataset with the integration of expert knowledge from the medical knowledge base UMLS.
-Each image in the recaptioned dataset is paired with 4 various augmented captions. [Details](https://www.dropbox.com/scl/fo/znirudc5ou800gksola04/AKRpmd_DCyjV5i4aOL085ZE?rlkey=ihurwizna1j4ueydlkkmj4p0d&st=npny6k0d&dl=0)
+Each image in the recaptioned dataset is paired with 4 various augmented captions. [Details](https://www.dropbox.com/scl/fo/wgqaeeyus8mkn4snd7b55/AEWp3wGv8PazetduAC4nNsM?rlkey=xttkwvncqfjri962jt5coro9c&st=n7xrpkiw&dl=0)
 
 
 ## Acknowledgement
 
-The implementation of RaceCLIP is based on [LLaVa-Med](https://github.com/microsoft/LLaVA-Med), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html).
+The implementation of RaceCLIP is based on [MedGemma-1.5]([https://github.com/microsoft/LLaVA-Med](https://huggingface.co/google/medgemma-1.5-4b-it), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html).
 We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
 
