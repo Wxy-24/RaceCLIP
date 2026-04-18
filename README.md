@@ -2,7 +2,6 @@
 
 <img src="workflow.svg">
 
-This is the implemenation of RaceCLIP.
 ### Requirements
 
 Run the following command to install the required packages:
@@ -19,7 +18,7 @@ python retrieval.py
 
 ### Retrieval augmented MLLM captioning
 
-Please download [MedGemma-1.5-4B](https://huggingface.co/google/medgemma-1.5-4b-it) before recaptioning the [ROCO](https://github.com/razorx89/roco-dataset) dataset
+Please download [MedGemma-1.5-4B](https://huggingface.co/google/medgemma-1.5-4b-it) before medical image recaptioning.
 The detailed usage of MedGemma is available via the [official repository](https://github.com/google-health/medgemma) provided by Google.
 
 ```angular2
