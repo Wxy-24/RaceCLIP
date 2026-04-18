@@ -22,7 +22,7 @@ Please download [MedGemma-1.5-4B](https://huggingface.co/google/medgemma-1.5-4b-
 The detailed usage of MedGemma is available via the [official repository](https://github.com/google-health/medgemma) provided by Google.
 
 ```angular2
-python MLLM_captioning.py
+python MLLM_recaptioning.py
 ```
 
 ### Multi-text contrastive learning
