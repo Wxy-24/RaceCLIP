@@ -39,6 +39,6 @@ Each image in the recaptioned dataset is paired with 4 various augmented caption
 
 ## Acknowledgement
 
-The implementation of RaceCLIP is based on [MedGemma](https://github.com/google-health/medgemma), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html).
+The implementation of RaceCLIP is based on [MedGemma](https://github.com/google-health/medgemma), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS](https://documentation.uts.nlm.nih.gov/rest/home.html).
 We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
 
