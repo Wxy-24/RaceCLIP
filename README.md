@@ -1,3 +1,4 @@
+This is the implementation of [ICMR26]:RaceCLIP: Augmenting medical vision-language pretraining via doamin-aware retrieval-augmented caption enrichment
 # RaceCLIP
 
 <img src="workflow.svg">
