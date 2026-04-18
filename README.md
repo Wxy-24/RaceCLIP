@@ -19,7 +19,7 @@ python retrieval.py
 
 ### Retrieval augmented MLLM captioning
 
-Please download [LLaVa-Med](https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b) before recaptioning the [ROCO](https://github.com/razorx89/roco-dataset) dataset
+Please download [MedGemma-1.5-4B](https://huggingface.co/google/medgemma-1.5-4b-it) before recaptioning the [ROCO](https://github.com/razorx89/roco-dataset) dataset
 The detailed usage of LLaVa-Med is available via the official repository provided by [Microsoft](https://github.com/microsoft/LLaVA-Med)
 
 ```angular2
@@ -40,6 +40,6 @@ Each image in the recaptioned dataset is paired with 4 various augmented caption
 
 ## Acknowledgement
 
-The implementation of RaceCLIP is based on [MedGemma-1.5]([https://github.com/microsoft/LLaVA-Med](https://huggingface.co/google/medgemma-1.5-4b-it), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html).
+The implementation of RaceCLIP is based on [MedGemma-1.5](https://huggingface.co/google/medgemma-1.5-4b-it), [CLIP](https://github.com/OpenAI/CLIP) and [UMLS API](https://documentation.uts.nlm.nih.gov/rest/home.html).
 We thank the authors for their open-sourced code and encourage users to cite their works when applicable.
 
